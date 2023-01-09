@@ -1,3 +1,10 @@
+<?php
+$lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nobis impedit laborum praesentium fuga molestias et? Vitae nostrum delectus voluptatibus et blanditiis deserunt. Molestias necessitatibus, rem soluta impedit a quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, possimus ab corporis doloribus, tempora odio impedit, accusamus fugiat molestias rerum maxime saepe est eaque! Tempore sunt distinctio beatae debitis perferendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, possimus ab corporis doloribus, tempora odio impedit, accusamus fugiat molestias rerum maxime saepe est eaque! Tempore sunt distinctio beatae debitis perferendis! ";
+
+$blur = $_GET["word"];
+$replace = "***";
+$censoredWord = str_replace($blur, $replace, $lorem);
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,10 +20,9 @@
         Titolo
     </h1>
     <p>
-        <?php
-        $lorem = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nobis impedit laborum praesentium fuga molestias et? Vitae nostrum delectus voluptatibus et blanditiis deserunt. Molestias necessitatibus, rem soluta impedit a quia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, possimus ab corporis doloribus, tempora odio impedit, accusamus fugiat molestias rerum maxime saepe est eaque! Tempore sunt distinctio beatae debitis perferendis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, possimus ab corporis doloribus, tempora odio impedit, accusamus fugiat molestias rerum maxime saepe est eaque! Tempore sunt distinctio beatae debitis perferendis! ";
-        echo $lorem;
-        ?>
+      <?php
+      echo $censoredWord;
+      ?>  
     </p>
     <h2>
         la lunghezza del paragrafo è :
@@ -25,7 +31,7 @@
         ?>
         caratteri
     </h2>
-        
+
     
 </body>
 
